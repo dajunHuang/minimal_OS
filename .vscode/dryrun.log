@@ -1,0 +1,8 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory '/root/minimal_OS'
+riscv64-unknown-elf-gcc -march=rv32imac -mabi=ilp32 -o build/kernel/entry.o -c kernel/src/entry.S -Wall -Werror -O -fno-omit-frame-pointer -ggdb -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -fno-stack-protector -fno-pie -no-pie -I. -Ikernel/include
+riscv64-unknown-elf-gcc -march=rv32imac -mabi=ilp32 -o build/kernel/uart.o -c kernel/src/entry.S -Wall -Werror -O -fno-omit-frame-pointer -ggdb -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -fno-stack-protector -fno-pie -no-pie -I. -Ikernel/include
+riscv64-unknown-elf-gcc -march=rv32imac -mabi=ilp32 -o build/kernel/main.o -c kernel/src/entry.S -Wall -Werror -O -fno-omit-frame-pointer -ggdb -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -fno-stack-protector -fno-pie -no-pie -I. -Ikernel/include
+riscv64-unknown-elf-gcc -march=rv32imac -mabi=ilp32 -o build/kernel/start.o -c kernel/src/entry.S -Wall -Werror -O -fno-omit-frame-pointer -ggdb -mcmodel=medany -ffreestanding -fno-common -nostdlib -mno-relax -fno-stack-protector -fno-pie -no-pie -I. -Ikernel/include
+make: Leaving directory '/root/minimal_OS'
+ 
